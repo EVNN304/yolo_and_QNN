@@ -113,6 +113,6 @@ ResNet18 → Linear(512→128) → BN → ReLU → Dropout
     model_path="drones_model_3.pth",
     class_map={0: "drone", 1: "bird", 2: "plane", 3: "background"}
 )
-  # Ожидаемый вывод: ✓ QuantumRefiner loaded | cuda | classes: [...]
+
 
   
