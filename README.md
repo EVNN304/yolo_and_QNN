@@ -54,14 +54,14 @@ ResNet18 → Linear(512→128) → BN → ReLU → Dropout
 
 🗂️ Структура репозитория
 
-📦 yolo_and_QNN/
-├── 📄 quantum_refiner.py          # Ядро: HybridModel + QuantumLayer + QuantumRefiner
-├── 📄 infer_pennyline_yolo.py     # Обработчик: Quantum_batches + QuantumVisualizer
-├── 📄 infer_yolo_QNN.py           # 🚀 Точка входа: оркестрация всего пайплайна
-├── 📄 yolo_batch_main_mot.py      # Детектор: YOLO + 8 NMS алгоритмов
-├── 📄 init_Yolo_for_sahi_batches_v2.py  # Визуализация и сохранение результатов
-├── 📄 requirements.txt           
-├── 📄 README.md                   
+  📦 yolo_and_QNN/
+  ├── 📄 quantum_refiner.py          # Ядро: HybridModel + QuantumLayer + QuantumRefiner
+  ├── 📄 infer_pennyline_yolo.py     # Обработчик: Quantum_batches + QuantumVisualizer
+  ├── 📄 infer_yolo_QNN.py           # 🚀 Точка входа: оркестрация всего пайплайна
+  ├── 📄 yolo_batch_main_mot.py      # Детектор: YOLO + 8 NMS алгоритмов
+  ├── 📄 init_Yolo_for_sahi_batches_v2.py  # Визуализация и сохранение результатов
+  ├── 📄 requirements.txt           
+  ├── 📄 README.md                   
 
 🚀 Быстрый старт
 1. Клонирование и установка
@@ -130,6 +130,22 @@ ResNet18 → Linear(512→128) → BN → ReLU → Dropout
     model_path="drones_model_3.pth",
     class_map={0: "drone", 1: "bird", 2: "plane", 3: "background"}
 )
+📸 Примеры работы
+
+Ниже представлены примеры работы гибридной квантово-классической системы детекции и классификации летательных аппаратов в реальном времени.
+
+  ### 🎯 Детекция объектов
+
+  #### Кадр 1: Обнаружение объекта
+  ![Детекция объекта](examples/Снимок%20экрана%20от%202026-03-15%2000-40-11.png)
+  *Первичное обнаружение объекта с помощью YOLOv11*
+
+
+  #### Кадр 2: Квантовое уточнение
+  ![Quantum Refiner](examples/Снимок%20экрана%20от%202026-03-15%2000-43-00.png)
+
+  #### Кадр 6: Финальная визуализация
+  ![Финальный результат](examples/Снимок%20экрана%20от%202026-03-15%2000-43-42.png)
 
 
 🤝 Лицензия
