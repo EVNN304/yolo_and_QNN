@@ -115,7 +115,12 @@ ResNet18 → Linear(512→128) → BN → ReLU → Dropout
 )
 
 
+🤝 Лицензия
+MIT License
 
+Copyright (c) 2026 EVNN304
+
+Permission is hereby granted...
 
 
 
