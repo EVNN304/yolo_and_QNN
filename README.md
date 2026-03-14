@@ -115,4 +115,21 @@ ResNet18 → Linear(512→128) → BN → ReLU → Dropout
 )
 
 
+
+
+
+
+
+
+
+Если вы используете этот проект в исследовании, пожалуйста, сошлитесь на него:
+
+
+@misc{hqnn-detect2026,
+  author = {EVNN304},
+  title = {HQNN-Detect: Hybrid Quantum-Classical Object Detection},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/EVNN304/yolo_and_QNN}
+}
   
