@@ -74,13 +74,22 @@ ResNet18 → Linear(512→128) → BN → ReLU → Dropout
   # или
   venv\Scripts\activate     # Windows
   
-  # Установите зависимости
-  pip install torch torchvision pennylane ultralytics opencv-python numpy pillow
-  # Для GPU-ускорения квантовых вычислений (опционально):
-  # pip install pennylane-lightning-gpu
+  Шаг 2: Установи зависимости
+    # Вариант A: Установка из requirements.txt
+    pip install -r requirements.txt
+
+    # Вариант B: Пошаговая установка (рекомендуется для контроля)
+    # 1. PyTorch с CUDA 11.8
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+    # 2. PennyLane с GPU
+    pip install pennylane pennylane-lightning pennylane-lightning-gpu
+
+    # 3. Остальные зависимости
+    pip install ultralytics opencv-python opencv-contrib-python Pillow numpy typing-extensions
 
 2. Подготовка моделей
-  # YOLOv11 веса
+  # YOLOv11-26 веса
   YOLO_MODEL_PATH = "/path/to/best_yolo11x_288x288_batch_64.pt"
   
   # Квантовая модель
@@ -104,14 +113,14 @@ ResNet18 → Linear(512→128) → BN → ReLU → Dropout
   }
   cl = Yolo_batches(...)
   cl.set_nms_type("classic")  # Доступные варианты:
-  # "classic"   — стандартный NMS (быстрый)
-  # "soft"      — Soft-NMS (плавное подавление)
-  # "wbf"       — Weighted Boxes Fusion
-  # "diou"      — DIoU-NMS (учёт расстояния центров)
-  # "adaptive"  — Adaptive NMS (динамический порог)
-  # "cluster"   — Cluster NMS
-  # "nmm"       — Non-Maximum Merge
-# "greedynmm" — Greedy NMM
+    # "classic"   — стандартный NMS (быстрый)
+    # "soft"      — Soft-NMS (плавное подавление)
+    # "wbf"       — Weighted Boxes Fusion
+    # "diou"      — DIoU-NMS (учёт расстояния центров)
+    # "adaptive"  — Adaptive NMS (динамический порог)
+    # "cluster"   — Cluster NMS
+    # "nmm"       — Non-Maximum Merge
+    # "greedynmm" — Greedy NMM
 
 🧪 Тестирование
 
